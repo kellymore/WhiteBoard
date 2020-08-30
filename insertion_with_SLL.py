@@ -64,6 +64,24 @@ class LinkedList:
         # and the new node becomes the head
         self.head = new_node
 
+    # This inserts after a given node
+    def insert_after_given_node(self, given_node, data):
+
+        if not given_node:
+            print("Given node not on the list")
+            return
+
+        # create new node
+        new_node = Node(data)
+        
+        # new_node.next points to given_node.next
+        new_node.next = given_node.next
+        # given_node.next is now the new_node
+        given_node.next = new_node
+
+
+
+
 
 
 
@@ -76,7 +94,13 @@ llist.append("B")
 llist.append("C")
 llist.append("D")
 
-llist.prepend("E")
+print("head", llist.head.data)
+print("head.next", llist.head.next.data)
+# our given node here is "B" which is head.next
+llist.insert_after_given_node(llist.head.next, "X")
+
+# uncomment to prepend
+# llist.prepend("E")
 llist.print_list()
 
 
