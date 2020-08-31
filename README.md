@@ -3,11 +3,26 @@ This repo is a collection of WhiteBoard challenges for technical interview prepa
 
 
 ## Table of Contents
-* [Insertion of Nodes in a Singly Linked List](#insertion-of-nodes-in-a-singly-linked-list)
+* [Singly Linked Lists](#singly-linked-lists)
 
 
-## Insertion of Nodes in a Singly Linked List
-The insertion_with_SLL.py file consists of insertion methods to append a list, prepend a list, and insert after a given node on a singly linked list.
+## Singly Linked Lists
+The singly_linked_lists.py file consists of the following methods:
+
+```
+append()
+Adds a node to the end of a list
+
+prepend()
+Adds a node to the begining of a list
+
+insert_after_given_node()
+Adds a node after a certain node on the list
+
+swap_nodes()
+swaps 2 nodes inside a list
+
+```
 
 
 ## Available Guides
