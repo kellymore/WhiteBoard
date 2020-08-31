@@ -35,8 +35,8 @@ _insert()
 Moves along the BST inserting node values in a sorted manner from left to right
 
 find()
-Checks to see if there is a root node and uses the _find() helper method. If the Node exists, it prints True,
-if i does not, it prints False.
+Checks to see if there is a root node and uses the _find() helper method. 
+If the Node exists, it prints True, if i does not, it prints False.
 
 _find()
 Elimintes half of the tree when searching for a given node
