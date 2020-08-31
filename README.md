@@ -4,7 +4,7 @@ This repo is a collection of WhiteBoard challenges for technical interview prepa
 
 ## Table of Contents
 * [Singly Linked Lists](#singly-linked-lists)
-* [Binary Search Trees](binary-search-trees)
+* [Binary Search Trees](#binary-search-trees)
 
 
 ## Singly Linked Lists
