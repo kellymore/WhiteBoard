@@ -79,11 +79,65 @@ class LinkedList:
         # given_node.next is now the new_node
         given_node.next = new_node
 
+    
+    def swap_nodes(self, key_1, key_2):
+        # we need to disqualify the keys if they are the
+        # same, since swapping the same exact keys in a SLL
+        # is useless
+        if key_1 == key_2:
+            return
+
+        # The first pointer:
+        # we start at the head when looking for both keys
+        # since nothing comes before the head, we can set that 
+        # to None
+        prev_1 = None
+        cur_1 = self.head
+        # while we do have a self.head and its current
+        # data value does not equal to key_1
+        while cur_1 and cur_1.data != key_1:
+            # move along the list
+            prev_1 = cur_1
+            cur_1 = cur_1.next
 
 
+        # The second pointer:
+        # we start at the head when looking for both keys
+        # since nothing comes before the head, we can set that 
+        # to None
+        prev_2 = None
+        cur_2 = self.head
+        # while we do have a self.head and its data value
+        # is not equal to key_2
+        while cur_2 and cur_2.data != key_2:
+            # move along the list
+            prev_2 = cur_2
+            cur_2 = cur_2.next
 
 
+        # if neither cur_1 or cur_2 are not on the list
+        # then return
+        if not cur_1 or not cur_2:
+            return
 
+        # in the case where a previous node exists
+        # and a node we're swapping, is not a head node
+        if prev_1:
+            # change the pointer to point to cur_2
+            prev_1.next = cur_2
+        # if it is a head node
+        else:
+            # make head cur_2
+            self.head = cur_2
+        
+        if prev_2:
+            # change the pointer to point to cur_1
+            prev_2.next = cur_1
+        else:
+            self.head = cur_1
+
+        # swap
+        cur_1.next, cur_2.next = cur_2.next, cur_1.next
 
 
 
@@ -93,14 +147,30 @@ llist.append("A")
 llist.append("B")
 llist.append("C")
 llist.append("D")
+# uncomment to print
+# llist.print_list()
 
-print("head", llist.head.data)
-print("head.next", llist.head.next.data)
+# uncomment to insert a node after "B"
 # our given node here is "B" which is head.next
-llist.insert_after_given_node(llist.head.next, "X")
+# llist.insert_after_given_node(llist.head.next, "X")
 
 # uncomment to prepend
 # llist.prepend("E")
+
+
+# Swap Nodes
+# uncomment to swap if none are head
+# llist.swap_nodes("B", "C")
+
+# uncomment to swap if 1 is head
+# llist.swap_nodes("A", "C")
+
+# uncomment to swap if the other is head
+# llist.swap_nodes("C", "A")
+
+# uncomment to "swap" if both nodes are the same
+# llist.swap_nodes("A", "A")
+
 llist.print_list()
 
 
