@@ -4,6 +4,7 @@ This repo is a collection of WhiteBoard challenges for technical interview prepa
 
 ## Table of Contents
 * [Singly Linked Lists](#singly-linked-lists)
+* [Binary Search Trees](binary-search-trees)
 
 
 ## Singly Linked Lists
@@ -20,10 +21,27 @@ insert_after_given_node()
 Adds a node after a certain node on the list
 
 swap_nodes()
-swaps 2 nodes inside a list
+Swaps 2 nodes in a list
 
 ```
+## Binary Search Trees
+The binary_search_trees.py file consists of the following methods:
 
+```
+insert()
+Creates a node at the root if there isn't one, and uses the _insert() helper method if there is
+
+_insert()
+Moves along the BST inserting node values in a sorted manner from left to right
+
+find()
+Checks to see if there is a root node and uses the _find() helper method. If the Node exists, it prints True,
+if i does not, it prints False.
+
+_find()
+Elimintes half of the tree when searching for a given node
+
+```
 
 ## Available Guides
 
