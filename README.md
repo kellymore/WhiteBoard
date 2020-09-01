@@ -47,7 +47,6 @@ Elimintes half of the tree when searching for a given node
 The cicular_linked_lists.py fil consists of the following methods:
 
 ```
-
 prepend()
 Creates a head node and points it to itself if no head node exists. Adds a node before another.
 
