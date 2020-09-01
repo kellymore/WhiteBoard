@@ -5,6 +5,7 @@ This repo is a collection of WhiteBoard challenges for technical interview prepa
 ## Table of Contents
 * [Singly Linked Lists](#singly-linked-lists)
 * [Binary Search Trees](#binary-search-trees)
+* [Circular Linked Lists](#circular-linked-lists)
 
 
 ## Singly Linked Lists
@@ -42,6 +43,22 @@ _find()
 Elimintes half of the tree when searching for a given node
 
 ```
+## Circular Linked Lists
+The cicular_linked_lists.py fil consists of the following methods:
+
+```
+
+prepend()
+Creates a head node and points it to itself if no head node exists. Adds a node before another.
+
+append()
+Creates a head node and points it to itself if no head node exists. Adds a node after another.
+
+print_list()
+Prints all data values in the list and breaks upon returning to the head to prevent an infinite loop.
+
+```
+
 
 ## Available Guides
 
