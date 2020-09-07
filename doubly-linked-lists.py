@@ -31,7 +31,16 @@ class DoublyLinkedList:
             new_node.next = None
             
     def prepend(self, data):
-        new_node = Node(data)
+        if self.head is None:
+            new_node = Node(data)
+            new_node.prev = None
+            self.head = new_node
+        else: 
+            new_node = Node(data)
+            self.head.prev = new_node
+            new_node.next = self.head
+            self.head = new_node
+            new_node.prev = None
 
     def print_list(self):
         cur = self.head
@@ -42,9 +51,11 @@ class DoublyLinkedList:
 
 
 dll = DoublyLinkedList()
+dll.prepend(0)
 dll.append(1)
 dll.append(2)
 dll.append(3)
 dll.append(4)
+dll.prepend(5)
 
 dll.print_list()
