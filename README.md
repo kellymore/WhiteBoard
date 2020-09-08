@@ -6,6 +6,7 @@ This repo is a collection of WhiteBoard challenges for technical interview prepa
 * [Singly Linked Lists](#singly-linked-lists)
 * [Binary Search Trees](#binary-search-trees)
 * [Circular Linked Lists](#circular-linked-lists)
+* [Doubly Linked Lists](#doubly-linked-lists)
 
 
 ## Singly Linked Lists
@@ -58,12 +59,21 @@ Prints all data values in the list and breaks upon returning to the head to prev
 
 ```
 
+## Doubly Linked Lists
+The doubly_linked_liss.py file consists of the following methods:
+
+```
+prepend()
+
+append()
+
+print_list()
+
+```
+
 
 ## Available Guides
 
 [How to Insert a Node at a Specific Position in a Linked List](https://levelup.gitconnected.com/how-to-insert-a-node-at-a-specific-position-in-a-linked-list-2abc783a578b)
 
 [How to Find The Merge Point of Two Linked Lists](https://levelup.gitconnected.com/how-to-find-the-merge-point-of-two-linked-lists-ba55a129caa2)
-
-
-
