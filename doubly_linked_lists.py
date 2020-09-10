@@ -49,6 +49,31 @@ class DoublyLinkedList:
             print(cur.data)
             cur = cur.next
 
+    def add_after_node(self, key, data):
+        # pointer
+        cur = self.head
+        # move the pointer
+        while cur:
+            # checking if there is only a head
+            # and if the head has the key value
+            if cur.next is None and cur.data == key:
+                self.append(data)
+                return
+            elif cur.data == key:
+                # create new node
+                new_node = Node(data)
+                # pointer
+                nxt = cur.next
+                # update pointer to point to new node
+                cur.next = new_node
+                # the next pointer of the new node
+                new_node.next = nxt
+                # updating prev pointers
+                new_node.prev = cur
+                nxt.prev = new_node
+            cur = cur.next
+
+
 
 dll = DoublyLinkedList()
 dll.prepend(0)
@@ -57,5 +82,8 @@ dll.append(2)
 dll.append(3)
 dll.append(4)
 dll.prepend(5)
+
+dll.add_after_node(1, 11)
+dll.add_after_node(5, 12)
 
 dll.print_list()
