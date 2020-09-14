@@ -10,6 +10,7 @@ This repo is a collection of WhiteBoard challenges for technical interview prepa
 
 
 ## Singly Linked Lists
+![singly linked list](/images/singly_linked_list.png)
 The singly_linked_lists.py file consists of the following methods:
 
 ```
@@ -45,6 +46,7 @@ Elimintes half of the tree when searching for a given node
 
 ```
 ## Circular Linked Lists
+![circular linked list](/images/circular_linked_list.png)
 The cicular_linked_lists.py fil consists of the following methods:
 
 ```
