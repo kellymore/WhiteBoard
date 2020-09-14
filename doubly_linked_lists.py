@@ -96,6 +96,64 @@ class DoublyLinkedList:
                 new_node.prev = prv
             cur = cur.next
 
+    def delete(self, key):
+        # pointer
+        cur = self.head
+
+        while cur is not None:
+            
+            if cur.data == key and cur == self.head:
+                # in the case where there is only 1 node in the 
+                # list, the head node
+                if not cur.next:
+                    # del pointer
+                    cur = None
+                    # del node
+                    self.head = None
+                    return 
+                # in the case where we want to del the head node
+                # but it has a next pointer
+                else:
+                    nxt = cur.next
+                    cur = None
+                    nxt.prev = None
+                    self.head = nxt
+                    return
+            
+            # we're travesing here still inside the while loop
+            elif cur.data == key:
+                # in the case where we want to remove a node in the
+                # middle of the DLL
+                if cur.next is not None:
+                    # pointers
+                    nxt = cur.next
+                    prv = cur.prev
+
+                    prev.next = nxt
+                    nxt.prev = prv
+
+                    # del pointers that are no longer doing anything
+                    cur.next = None
+                    cur.prev = None
+
+                    cur = None
+                    return
+
+                # in the case where we want to del the last node on 
+                # the DLL
+                else:
+                    prv = cur.prev
+                    prv.next = None
+                    cur.prev = None
+                    cur = None
+                    return
+            cur = cur.next
+                
+
+                
+
+
+
 
 
 
